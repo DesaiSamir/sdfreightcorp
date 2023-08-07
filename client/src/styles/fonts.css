@@ -1,0 +1,7 @@
+/* fonts.css */
+
+@font-face {
+    font-family: 'Harlow Solid Italics';
+    src: url('../fonts/harlow_solid_italics.ttf') format('truetype');
+  }
+  

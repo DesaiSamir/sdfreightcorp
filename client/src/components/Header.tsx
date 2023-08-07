@@ -34,7 +34,7 @@ const Header: React.FC = () => {
     };
 
     return (
-        <AppBar position="sticky" ref={headerRef}>
+        <AppBar position="sticky" ref={headerRef} className={classes.appBar}>
             <Toolbar className={classes.toolbar}>
                 {isMobile ? (
                     <>
@@ -52,15 +52,15 @@ const Header: React.FC = () => {
                         <img src={logo} alt="Company Logo" className={classes.logo} />
                         <div className={classes.grow} />
                         <div className={classes.desktopNavLinks}>
-                            <Button color="inherit" component={Link} to="/">
+                            <Button color="inherit" component={Link} to="/sdfreightcorp/">
                                 HOME
                             </Button>
-                            <Button color="inherit" component={Link} to="/about">
+                            <Button color="inherit" component={Link} to="/sdfreightcorp/about">
                                 ABOUT US
                             </Button>
                         </div>
                         <div className={classes.grow} />
-                        <Button color="inherit" component={Link} to="/login">
+                        <Button color="inherit" component={Link} to="/sdfreightcorp/login">
                             Login
                         </Button>
                     </>
@@ -68,13 +68,13 @@ const Header: React.FC = () => {
             </Toolbar>
             <Drawer anchor="right" open={isMobileMenuOpen} onClose={handleMobileMenuClose} className={classes.mobileMenu}>
 				<List> {/* Apply menuList class here */}
-					<ListItem button component={Link} to="/" onClick={handleMobileMenuClose}>
+					<ListItem button component={Link} to="/sdfreightcorp/" onClick={handleMobileMenuClose}>
 						<ListItemText primary="HOME" />
 					</ListItem>
-					<ListItem button component={Link} to="/about" onClick={handleMobileMenuClose}>
+					<ListItem button component={Link} to="/sdfreightcorp/about" onClick={handleMobileMenuClose}>
 						<ListItemText primary="ABOUT US" />
 					</ListItem>
-					<ListItem button component={Link} to="/login" onClick={handleMobileMenuClose}>
+					<ListItem button component={Link} to="/sdfreightcorp/login" onClick={handleMobileMenuClose}>
 						<ListItemText primary="LOGIN" />
 					</ListItem>
 				</List>
@@ -84,7 +84,10 @@ const Header: React.FC = () => {
 };
 
 const useStyles = makeStyles((theme: Theme) => ({
-    toolbar: {
+    appBar: {
+		backgroundColor: '#5d6060',
+	},
+	toolbar: {
         display: 'flex',
         alignItems: 'center',
     },

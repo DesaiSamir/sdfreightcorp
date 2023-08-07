@@ -4,10 +4,12 @@ import React, { useEffect, useState } from 'react';
 import { Container, Typography, Button, Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
 import ImageCarousel from '../components/ImageCarousel'; // Import the ImageCarousel component
-
 import HeroImage from '../assets/trucks-on-road.webp';
 import { useHeaderRef } from '../contexts/HeaderContext'; // Import the hook
 import { fleetImages } from '../helpers/constants';
+import { Service } from '../interfaces/Service';
+import { makeStyles } from '@mui/styles'; // Import the makeStyles and createTheme functions
+import { Theme } from '@mui/material/styles'; // Update the import for Theme
 
 // Import Material-UI icons for selected services
 import Drivers from '@mui/icons-material/AirlineSeatReclineNormal';
@@ -17,10 +19,7 @@ import DriverIcon from '@mui/icons-material/EmojiTransportation'; // For "Benefi
 import ELDIcon from '@mui/icons-material/DriveEta'; // For "Electronic Logging Devices (ELDs)"
 import MobileAppIcon from '@mui/icons-material/PhoneAndroid'; // For "Mobile Applications"
 import VEDRIcon from '@mui/icons-material/Videocam'; // For "Video Event Data Recording (VEDR)"
-import { Service } from '../interfaces/Service';
 import MobileServiceSection from '../components/MobileServiceSection';
-import { makeStyles } from '@mui/styles'; // Import the makeStyles and createTheme functions
-import { Theme } from '@mui/material/styles'; // Update the import for Theme
 
 const Home: React.FC = () => {
     // Use the hook to access the headerRef
@@ -125,11 +124,11 @@ const Home: React.FC = () => {
             <div style={{ position: 'relative', height: `calc(100vh - ${headerHeight}px)` }}>
                 {
                     isMobileDevice ? (
-                        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', position: 'fixed', top: 0, left: 0, width: '100%', zIndex: -1 }}>
-                            <img src={HeroImage} alt="Trucks on the road" style={{ width: 'auto', height: '100%', opacity: 0.7 }} />
+                        <div className={classes.mobileHeroImgDiv}> 
+							<img src={HeroImage} alt="Trucks on the road" className={classes.mobileHeroImage} />
                         </div>
                     ) : (
-                        <img src={HeroImage} alt="Trucks on the road" style={{ width: '100%', height: 'auto', opacity: 0.7, position: 'fixed', top: 0, left: 0, zIndex: -1 }} />
+                        <img src={HeroImage} alt="Trucks on the road" className={classes.desktopHeroImage} /> 
                     )
                 }
 
@@ -137,11 +136,14 @@ const Home: React.FC = () => {
                 <div className={classes.blackOverlay}></div>
 
                 {/* Hero Content */}
-                <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', color: 'white', zIndex: 1 }}>
-                    <Typography variant="h2" gutterBottom>
-                        Welcome to SD Freight Corp
+                <div className={classes.heroContentDiv} > 
+					<Typography variant="h4" gutterBottom>
+                        Welcome to 
                     </Typography>
-                    <Typography variant="h4" gutterBottom>
+					<Typography variant="h2" gutterBottom style={{ fontFamily: 'Harlow Solid Italics' }}>
+                        SD Freight Corp.
+                    </Typography>
+                    <Typography variant="h5" gutterBottom>
                         Delivering Excellence in Trucking
                     </Typography>
                     <Button variant="contained" color="primary" size="large" component={Link} to="/about-us">
@@ -151,7 +153,7 @@ const Home: React.FC = () => {
             </div>
 
             {/* Services Section */}
-            <section style={{ padding: '4rem 0', backgroundColor: 'rgb(6 6 6 / 60%)', color: 'white' }}>
+            <section className={classes.section}>
 				<Container maxWidth="lg">
                     <Typography variant="h3" align="center" gutterBottom>
 						Delivering Beyond Expectations
@@ -177,8 +179,9 @@ const Home: React.FC = () => {
 					</Grid>
                 </Container>
             </section>
+			
 			{/* Technology Advancements */}
-			<section style={{ padding: '4rem 0', backgroundColor: 'rgb(6 6 6 / 60%)', color: 'white' }}>
+			<section className={classes.section}>
 				<Container maxWidth="lg">
 					<Typography variant="h3" align="center" gutterBottom>
 						Technology-Driven Solutions
@@ -206,7 +209,7 @@ const Home: React.FC = () => {
 			</section>
 
 			{/* State-of-the-Art Fleet */}
-			<section style={{ padding: '4rem 0', backgroundColor: 'rgb(6 6 6 / 60%)', color: 'white' }}>
+			<section className={classes.section}>
 				<Container maxWidth="lg">
 					<Grid container spacing={4}>
 						{/* Image Carousel */}
@@ -227,9 +230,8 @@ const Home: React.FC = () => {
 				</Container>
 			</section>
 
-
 			{/* Benefits for Drivers */}
-			<section style={{ padding: '4rem 0', backgroundColor: 'rgb(6 6 6 / 60%)', color: 'white' }}>
+			<section className={classes.section}>
 				<Container maxWidth="lg">
 					<Grid container spacing={3} justifyContent="center">
 						{
@@ -254,7 +256,7 @@ const Home: React.FC = () => {
 			</section>
 
             {/* Call-to-Action Banner */}
-            <section style={{ backgroundColor: '#f9f9f9', textAlign: 'center', padding: '2rem 0' }}>
+            <section className={classes.ctaSection}>
                 <Typography variant="h4" gutterBottom>
                     Ready to Get Started?
                 </Typography>
@@ -269,29 +271,6 @@ const Home: React.FC = () => {
 export default Home;
 
 const useStyles = makeStyles((theme: Theme) => ({
-	// heroSection: {
-	// 	position: 'relative',
-	// 	height: `calc(100vh - ${theme.mixins.toolbar.minHeight}px)`,
-	// 	[theme.breakpoints.down('sm')]: {
-	// 		position: 'fixed',
-	// 		top: 0,
-	// 		left: 0,
-	// 		width: '100%',
-	// 		zIndex: -1,
-	// 		display: 'flex',
-	// 		justifyContent: 'center',
-	// 		alignItems: 'center',
-	// 	},
-	// },
-	// heroImage: {
-	// 	width: '100%',
-	// 	height: 'auto',
-	// 	opacity: 0.7,
-	// 	[theme.breakpoints.down('sm')]: {
-	// 		width: 'auto',
-	// 		height: '100%',
-	// 	},
-	// },
 	blackOverlay: {
 		position: 'fixed',
 		top: 0,
@@ -311,5 +290,49 @@ const useStyles = makeStyles((theme: Theme) => ({
 		color: 'white',
 		zIndex: 1,
 	},
+	mobileHeroImgDiv: { 
+		display: 'flex', 
+		justifyContent: 'center', 
+		alignItems: 'center', 
+		height: '100%', 
+		position: 'fixed', 
+		top: 0, 
+		left: 0, 
+		width: '100%', 
+		zIndex: -1 
+	},
+	mobileHeroImage:{ 
+		width: 'auto', 
+		height: '100%', 
+		opacity: 0.7 
+	},
+	desktopHeroImage: { 
+		width: '100%', 
+		height: 'auto', 
+		opacity: 0.7, 
+		position: 'fixed', 
+		top: 0, 
+		left: 0, 
+		zIndex: -1 
+	},
+	heroContentDiv: { 
+		position: 'absolute', 
+		top: '50%', 
+		left: '50%', 
+		transform: 'translate(-50%, -50%)', 
+		textAlign: 'center', 
+		color: 'white', 
+		zIndex: 1 
+	},
+    section: {
+        padding: '4rem 0',
+        backgroundColor: 'rgb(6 6 6 / 60%)',
+        color: 'white',
+    },
+    ctaSection: {
+        backgroundColor: '#f9f9f9',
+        textAlign: 'center',
+        padding: '2rem 0',
+    },
 	// Add styles for other sections here...
   }));

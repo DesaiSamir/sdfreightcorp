@@ -7,6 +7,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import { HeaderProvider } from './contexts/HeaderContext';
 import { ThemeProvider, createTheme } from '@mui/material/styles'; // Import ThemeProvider and createTheme
+import './styles/fonts.css'; // Import the custom fonts CSS file
+
 const theme = createTheme(); // Create your custom theme here
 
 const App: React.FC = () => {
@@ -17,8 +19,8 @@ const App: React.FC = () => {
                     <div>
                         <Header />
                         <Routes>
-                            <Route path="/about" element={<About />} />
-                            <Route path="/" element={<Home />} />
+                            <Route path="/sdfreightcorp/about" element={<About />} />
+                            <Route path="/sdfreightcorp/" element={<Home />} />
                         </Routes>
                     </div>
                 </HeaderProvider>
