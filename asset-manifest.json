@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/sdfreightcorp/static/css/main.8d54c2d8.css",
-    "main.js": "/sdfreightcorp/static/js/main.c93dbcfc.js",
+    "main.css": "/sdfreightcorp/static/css/main.93bf7658.css",
+    "main.js": "/sdfreightcorp/static/js/main.55de2544.js",
     "static/js/787.c4e7f8f9.chunk.js": "/sdfreightcorp/static/js/787.c4e7f8f9.chunk.js",
     "static/media/fleet-3-side.jpg": "/sdfreightcorp/static/media/fleet-3-side.fa24982e0b17523d57b5.jpg",
     "static/media/fleet-3-front.jpg": "/sdfreightcorp/static/media/fleet-3-front.663b4f4e71d3b9c6e9d1.jpg",
     "static/media/fleet-2-side.jpg": "/sdfreightcorp/static/media/fleet-2-side.34605d3f4fe414f6a254.jpg",
     "static/media/trucks-on-road.webp": "/sdfreightcorp/static/media/trucks-on-road.62b0206ff5bb8a392a9a.webp",
+    "static/media/harlow_solid_italics.ttf": "/sdfreightcorp/static/media/harlow_solid_italics.ed65ca2a8287ed64d1bc.ttf",
     "static/media/fleet-1-side.jpg": "/sdfreightcorp/static/media/fleet-1-side.9c54cad73fbb5f4e7c61.jpg",
     "static/media/fleet-2-front.jpg": "/sdfreightcorp/static/media/fleet-2-front.5acdc2c904ad34ec7950.jpg",
     "static/media/fleet-1-front.jpg": "/sdfreightcorp/static/media/fleet-1-front.8643cb7ee24e6c87eb14.jpg",
-    "static/media/sdfreight-logo2a.webp": "/sdfreightcorp/static/media/sdfreight-logo2a.85f7dcef1b325766527a.webp",
+    "static/media/sdfreight-logo2a.webp": "/sdfreightcorp/static/media/sdfreight-logo2a.7f2390aeea28aa659353.webp",
     "index.html": "/sdfreightcorp/index.html",
-    "main.8d54c2d8.css.map": "/sdfreightcorp/static/css/main.8d54c2d8.css.map",
-    "main.c93dbcfc.js.map": "/sdfreightcorp/static/js/main.c93dbcfc.js.map",
+    "main.93bf7658.css.map": "/sdfreightcorp/static/css/main.93bf7658.css.map",
+    "main.55de2544.js.map": "/sdfreightcorp/static/js/main.55de2544.js.map",
     "787.c4e7f8f9.chunk.js.map": "/sdfreightcorp/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8d54c2d8.css",
-    "static/js/main.c93dbcfc.js"
+    "static/css/main.93bf7658.css",
+    "static/js/main.55de2544.js"
   ]
 }
