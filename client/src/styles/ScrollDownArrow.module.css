@@ -1,0 +1,48 @@
+/* ScrollDownArrow.module.css */
+
+.arrowContainer {
+    background: #0b1d2a;
+}
+
+.arrows {
+    width: 60px;
+    height: 72px;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    bottom: 20px;
+}
+
+.arrowPath {
+    stroke: #2994D1;
+    fill: transparent;
+    stroke-width: 1px;
+    animation: arrow 2s infinite;
+}
+
+.arrow1 {
+    animation-delay: -1s;
+}
+
+.arrow2 {
+    animation-delay: -0.5s;
+}
+
+.arrow3 {
+    animation-delay: 0s;
+}
+
+@keyframes arrow {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}

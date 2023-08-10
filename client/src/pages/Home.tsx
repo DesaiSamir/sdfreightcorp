@@ -6,10 +6,11 @@ import { Link } from 'react-router-dom';
 import ImageCarousel from '../components/ImageCarousel'; // Import the ImageCarousel component
 import HeroImage from '../assets/trucks-on-road.webp';
 import { useHeaderRef } from '../contexts/HeaderContext'; // Import the hook
-import { fleetImages } from '../helpers/constants';
+import { fleetImages, links } from '../helpers/constants';
 import { Service } from '../interfaces/Service';
 import { makeStyles } from '@mui/styles'; // Import the makeStyles and createTheme functions
 import { Theme } from '@mui/material/styles'; // Update the import for Theme
+import { FEDEX_ORANGE, FEDEX_PURPLE } from '../helpers/constants';
 
 // Import Material-UI icons for selected services
 import Drivers from '@mui/icons-material/AirlineSeatReclineNormal';
@@ -20,6 +21,7 @@ import ELDIcon from '@mui/icons-material/DriveEta'; // For "Electronic Logging D
 import MobileAppIcon from '@mui/icons-material/PhoneAndroid'; // For "Mobile Applications"
 import VEDRIcon from '@mui/icons-material/Videocam'; // For "Video Event Data Recording (VEDR)"
 import MobileServiceSection from '../components/MobileServiceSection';
+import ScrollDownArrow from '../components/ScrollDownArrow';
 
 const Home: React.FC = () => {
     // Use the hook to access the headerRef
@@ -141,19 +143,22 @@ const Home: React.FC = () => {
                         Welcome to 
                     </Typography>
 					<Typography variant="h2" gutterBottom style={{ fontFamily: 'Harlow Solid Italics' }}>
-                        SD Freight Corp.
+						<span style={{ color: FEDEX_ORANGE }}>S</span>
+						<span style={{ color: FEDEX_PURPLE }}>D</span> Freight Corp.
                     </Typography>
                     <Typography variant="h5" gutterBottom>
                         Delivering Excellence in Trucking
                     </Typography>
-                    <Button variant="contained" color="primary" size="large" component={Link} to="/about-us">
-                        Learn More
-                    </Button>
+					
                 </div>
+				{/* Scroll Down Animation */}
+				<a href="#services">
+					<ScrollDownArrow />
+				</a>
             </div>
 
             {/* Services Section */}
-            <section className={classes.section}>
+            <section className={classes.section} id="services">
 				<Container maxWidth="lg">
                     <Typography variant="h3" align="center" gutterBottom>
 						Delivering Beyond Expectations
@@ -260,8 +265,8 @@ const Home: React.FC = () => {
                 <Typography variant="h4" gutterBottom>
                     Ready to Get Started?
                 </Typography>
-                <Button variant="contained" color="primary" size="large" component={Link} to="/contact-us">
-                    Contact Us
+                <Button variant="contained" color="primary" size="large" component={Link} to={links.careers}>
+                    Apply Now
                 </Button>
             </section>
         </div>
@@ -334,5 +339,6 @@ const useStyles = makeStyles((theme: Theme) => ({
         textAlign: 'center',
         padding: '2rem 0',
     },
+	
 	// Add styles for other sections here...
   }));

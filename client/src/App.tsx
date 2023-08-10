@@ -4,10 +4,12 @@ import React from 'react';
 import { BrowserRouter as Router, Routes , Route } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home';
-import About from './pages/About';
+import About from './pages/AboutUs';
 import { HeaderProvider } from './contexts/HeaderContext';
 import { ThemeProvider, createTheme } from '@mui/material/styles'; // Import ThemeProvider and createTheme
 import './styles/fonts.css'; // Import the custom fonts CSS file
+import Careers from './pages/Careers';
+import { links } from './helpers/constants'; // Import the links object from constants
 
 const theme = createTheme(); // Create your custom theme here
 
@@ -19,8 +21,9 @@ const App: React.FC = () => {
                     <div>
                         <Header />
                         <Routes>
-                            <Route path="/sdfreightcorp/about" element={<About />} />
-                            <Route path="/sdfreightcorp/" element={<Home />} />
+                            <Route path={links.about} element={<About />} />
+                            <Route path={links.careers} element={<Careers />} />
+                            <Route path={links.home} element={<Home />} />
                         </Routes>
                     </div>
                 </HeaderProvider>

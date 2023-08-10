@@ -14,3 +14,13 @@ export const fleetImages : string[] = [
   fleet3Front,
   fleet3Side,
 ];
+
+export const FEDEX_ORANGE = '#ff6600';
+export const FEDEX_PURPLE = '#660099';
+
+export const links = {
+  home: '/sdfreightcorp/',
+  about: '/sdfreightcorp/about',
+  careers: '/sdfreightcorp/careers',
+  login: '/sdfreightcorp/login',
+};
