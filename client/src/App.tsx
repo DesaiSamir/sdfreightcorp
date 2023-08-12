@@ -10,6 +10,8 @@ import { ThemeProvider, createTheme } from '@mui/material/styles'; // Import The
 import './styles/fonts.css'; // Import the custom fonts CSS file
 import Careers from './pages/Careers';
 import { links } from './helpers/constants'; // Import the links object from constants
+import Footer from './components/Footer';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 const theme = createTheme(); // Create your custom theme here
 
@@ -24,7 +26,9 @@ const App: React.FC = () => {
                             <Route path={links.about} element={<About />} />
                             <Route path={links.careers} element={<Careers />} />
                             <Route path={links.home} element={<Home />} />
+                            <Route path={links.privacy} element={<PrivacyPolicy />} />
                         </Routes>
+                        <Footer />
                     </div>
                 </HeaderProvider>
             </Router>

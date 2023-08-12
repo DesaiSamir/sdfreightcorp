@@ -23,4 +23,5 @@ export const links = {
   about: '/sdfreightcorp/about',
   careers: '/sdfreightcorp/careers',
   login: '/sdfreightcorp/login',
+  privacy: '/sdfreightcorp/privacy-policy',
 };

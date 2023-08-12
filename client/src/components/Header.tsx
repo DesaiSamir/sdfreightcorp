@@ -91,11 +91,10 @@ const Header: React.FC = () => {
 							<Button color="inherit" component={Link} to={links.careers}>
 								CAREERS
 							</Button>
+							<Button color="inherit" component={Link} to={links.login}>
+								Login
+							</Button>
 						</div>
-						<div className={classes.grow} />
-						<Button color="inherit" component={Link} to={links.login}>
-							Login
-						</Button>
 					</>
 				)}
 			</Toolbar>
