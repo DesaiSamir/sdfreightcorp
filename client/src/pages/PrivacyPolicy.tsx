@@ -39,7 +39,7 @@ const PrivacyPolicy: React.FC = () => {
                 SD Freight Corp (the “Company”) is committed to maintaining robust privacy protections for its users. Our Privacy Policy (“Privacy Policy”) is designed to help you understand how we collect, use, and safeguard the information you provide to us and to assist you in making informed decisions when using our Service.
             </Typography>
             <Typography variant="body1" paragraph>
-                For purposes of this Agreement, “Site” refers to the Company’s website, which can be accessed at https://www.sdfreight.com [or through our mobile application].
+                For purposes of this Agreement, “Site” refers to the Company’s website, which can be accessed at https://www.sdfreightcorp.com [or through our mobile application].
             </Typography>
             <Typography variant="body1" paragraph>
                 <strong>The Service</strong> refers to the Company’s informational and hiring services, which are accessed exclusively via the Site. Users visiting the website can explore detailed information about SD Freight Corp's values, mission, and the range of services offered. The website serves as a platform to showcase the Company's expertise in logistics and freight management, providing insights into its commitment to quality and customer satisfaction. Additionally, users interested in joining SD Freight Corp's team can access the hiring services section to explore available job positions and submit their applications. While the website primarily offers informational content about the Company's principles and services, users seeking to be a part of the SD Freight Corp workforce can engage with the hiring services provided.
@@ -135,7 +135,7 @@ const PrivacyPolicy: React.FC = () => {
                 <strong>VII. CONTACT US</strong>
             </Typography>
             <Typography variant="body1" component="div" paragraph>
-                If you have any questions regarding this Privacy Policy or the practices of this Site, please contact us by sending an email to support@sdfreight.com.
+                If you have any questions regarding this Privacy Policy or the practices of this Site, please contact us by sending an email to support@sdfreightcorp.com.
             </Typography>
             <Typography variant="body1" component="div" paragraph>
                 <strong>Last Updated:</strong> This Privacy Policy was last updated in August 2023.
